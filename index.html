@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Uncomment bellow to eneble responsiveness -->
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <title>soccer.md</title>        
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/jquery.dropdown.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!--[if gte IE 9]>
+          <style type="text/css">
+            .gradient {
+               filter: none;
+            }
+          </style>
+        <![endif]-->
+    </head>
+    <body class="index-page">        
+        <div class="page-wrap">
+                <header class="header" style="height: 237px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 auth-wrapper">
+                                <div class="auth">
+                                    <a href="#" role="button" class="auth-dropdown-toggle" data-jq-dropdown="#authorized-dropdown" data-horizontal-offset="80" data-vertical-offset="9">Константин Константинопольский</a>
+                                    <a href="#" role="button" class="auth-dropdown-toggle" data-jq-dropdown="#auth-dropdown" data-horizontal-offset="80" data-vertical-offset="9">Авторизация</a>
+                                    <ul class="lang">
+                                        <li class="active"><a href="#"><img src="img/lang-ru.png"></a></li>
+                                        <li><a href="#"><img src="img/lang-ro.png"></a></li>
+                                    </ul>
+                                    <div id="authorized-dropdown" class="jq-dropdown jq-dropdown-relative jq-dropdown-anchor-right auth-dropdown">
+                                        <ul class="authorized-links">
+                                            <li><a href="#">Написать пост</a></li>
+                                            <li><a href="#">Мой профиль</a></li>
+                                            <li><a href="#">Мой блог</a></li>
+                                            <li><a href="#">Выйти</a></li>                                            
+                                        </ul>
+                                    </div>
+                                    <div id="auth-dropdown" class="jq-dropdown jq-dropdown-relative jq-dropdown-anchor-right auth-dropdown">
+                                        <ul class="nav nav-tabs" role="tablist" id="auth-tabs">
+                                            <li role="presentation" class="active"><a href="#login" aria-controls="login" role="tab" data-toggle="tab">Вход</a></li>
+                                            <li role="presentation"><a href="#register" aria-controls="register" role="tab" data-toggle="tab">Регистрация</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="login">
+                                                <form>
+                                                    <label for="e-mail">E-mail</label>
+                                                    <input type="email" id="e-mail" required>
+                                                    <label for="password">Пароль</label>
+                                                    <input type="password" id="password" required>
+                                                    <button type="submit gradient">Войти</button>                                                    
+                                                </form>
+                                                <hr>
+                                                
+                                                <a href="#forgot-password" aria-controls="forgot-password" role="tab" data-toggle="tab" class="forgot-password-toggle">Я забыл пароль</a>
+                                                
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="register">
+                                                <form>
+                                                    <label for="r-e-mail">E-mail</label>
+                                                    <input type="email" id="r-e-mail" required>
+                                                    <label for="r-password">Пароль</label>
+                                                    <input type="password" id="r-password" required>
+                                                    <label for="retype-password">Повторите пароль</label>
+                                                    <input type="password" id="retype-password" required>
+                                                    <button type="submit gradient">Зарегистрироваться</button>                                                    
+                                                </form>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane" id="forgot-password">
+                                                <form>
+                                                    <label for="email">Введите e-mail, указанный при регистрации</label>
+                                                    <input type="email" id="email" required>
+                                                    <button type="submit gradient">Восстановить</button> 
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <div class="nav-wrapper">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <nav class="main-nav">
+                                            <ul class="clearfix">
+                                                <li class="active"><a href="#">Главная</a></li>
+                                                <li><a href="#">Блог</a></li>
+                                                <li><a href="#">Папарацци</a></li>
+                                                <li class="dropdown">
+                                                    <a href="#" id="dLabel" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Мультимедиа</a>
+
+                                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                        <li>
+                                                            <a href="#">Option</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Option</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Option</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </li>
+                                                <li><a href="#">Трансляции</a></li>
+                                                <li><a href="#">Передачи</a></li>
+
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <form class="search-form">
+                                            <input type="text" required>
+                                            <button type="submit"><i class="fa fa-search"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subnav-wrapper">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        <nav class="sub-nav">
+                                            <ul class="clearfix">
+                                                <li class="active"><a href="#">Национальная дивизия</a></li>
+                                                <li class="dropdown">
+                                                    <a href="#" id="dLabel" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Дивизия А</a>
+
+                                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                        <li>
+                                                            <a href="#">Option</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Option</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">Option</a>
+                                                        </li>
+                                                    </ul>
+
+                                                <li><a href="#">Кубок Молдовы</a></li>
+                                                <li><a href="#">Еврокубки</a></li>
+                                                <li><a href="#">Сборные</a></li>                                                                                          
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="col-xs-3">
+                                        <a href="#" class="stream-link"><i class="fa fa-play-circle-o"></i> Онлайн трансляция</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </nav>
+                    
+                </header>
+            
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="banner-area">
+                                <div class="logo-wrapper" style="max-width: 175px;">
+                                    <a href="#" class="logo"><img src="img/logo.png" width="225"></a>
+                                </div>
+                                <div class="banner-wrapper">
+                                    <div class="banner" style="margin-right: 40px;">
+                                        <a href="#" target="_blank" rel="nofollow"><img src="http://placehold.it/212x60"></a>
+                                    </div>
+                                    <div class="banner">
+                                        <a href="#" target="_blank" rel="nofollow"><img src="http://placehold.it/212x60"></a>
+                                    </div>
+                                    <div class="banner">
+                                        <a href="#" target="_blank" rel="nofollow"><img src="http://placehold.it/212x60"></a>
+                                    </div>
+                                    
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-separator"></div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="featured-article-wrapper">
+                                <a href="#">
+                                    <img src="pictures/featured-article.jpg" alt="Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы">
+                                    <div class="featured-article-description">
+                                        <p><span class="date">21 сентября 2015</span></p>
+                                        <p>Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="reportage" style="padding-top: 40px;">
+                                <h2>Репортажи</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="reportage-item">                                    
+                                            <img src="pictures/reportage.jpg" alt="Казнить нельзя помиловать">
+                                            <div class="reportage-shadow"></div> 
+                                            <p>Казнить нельзя помиловать</p>                                                                  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="reportage-item">                                    
+                                            <img src="pictures/reportage.jpg" alt="Казнить нельзя помиловать">
+                                            <div class="reportage-shadow"></div> 
+                                            <p>Казнить нельзя помиловать</p>                                                                  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="reportage-item">                                    
+                                            <img src="pictures/reportage.jpg" alt="Казнить нельзя помиловать">
+                                            <div class="reportage-shadow"></div> 
+                                            <p>Казнить нельзя помиловать</p>                                                                  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="reportage-item">                                    
+                                            <img src="pictures/reportage.jpg" alt="Казнить нельзя помиловать">
+                                            <div class="reportage-shadow"></div> 
+                                            <p>Казнить нельзя помиловать</p>                                                                  
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div class="main-news">
+                                <h2>Главные новости</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="clearfix main-news-item">
+                                            <img src="pictures/reportage.jpg" alt="Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы">
+                                            <p>Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix main-news-item">
+                                            <img src="pictures/reportage.jpg" alt="Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы">
+                                            <p>Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix main-news-item">
+                                            <img src="pictures/reportage.jpg" alt="Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы">
+                                            <p>Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span></p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix main-news-item">
+                                            <img src="pictures/reportage.jpg" alt="Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы">
+                                            <p>Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span></p>
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                                
+                            </div>
+
+                            <div class="other-news">
+                                <h2>Другие новости</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="clearfix other-news-item">
+                                            <i class="fa fa-caret-right"></i>                                    
+                                            Александр Куртеян подал в отставку с поста главного тренера сборной Молдовы <span>21.09.2015</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="popular" style="width: 190px;">
+                                <h2>Популярное</h2>
+                                <ul>
+                                    <li><a href="#">Категория</a></li>
+                                    <li><a href="#">Категория</a></li>
+                                    <li><a href="#">Категория</a></li>
+                                    <li><a href="#">Категория</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="time-wrapper">
+                                
+                            </div>
+
+                            <div class="weather">
+                                <!-- Gismeteo informer START -->
+                                <link rel="stylesheet" type="text/css" href="http://www.gismeteo.md/static/css/informer2/gs_informerClient.min.css">
+                                <div id="gsInformerID-cFmu22s63g8beV" class="gsInformer" style="width:100%;height:70px">
+                                  <div class="gsIContent">
+                                   <div id="cityLink">
+                                     <a href="http://www.gismeteo.md/city/daily/4980/" target="_blank">Погода в Кишинёве</a>
+                                   </div>
+                                   <div class="gsLinks">
+                                     <table>
+                                       <tr>
+                                         <td>
+                                           <div class="leftCol">
+                                             <a href="http://www.gismeteo.md" target="_blank">
+                                               <img alt="Gismeteo" title="Gismeteo" src="http://www.gismeteo.md/static/images/informer2/logo-mini2.png" align="absmiddle" border="0" />
+                                               <span>Gismeteo</span>
+                                             </a>
+                                           </div>
+                                           <div class="rightCol">
+                                             <a href="http://www.gismeteo.md/city/weekly/4980/" target="_blank">Прогноз на 2 недели</a>
+                                           </div>
+                                           </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                                <script src="http://www.gismeteo.md/ajax/getInformer/?hash=cFmu22s63g8beV" type="text/javascript"></script>
+                                <!-- Gismeteo informer END -->
+                            </div>
+
+                            <div class="index-feedback-form">
+                                <form>
+                                    <label for="f-name">Ваше имя</label>
+                                    <input type="text" id="f-name" required style="height: 50px;">
+
+                                    <label for="f-mail">Ваш e-mail</label>
+                                    <input type="email" id="f-mail" required>
+
+                                    <label for="f-message">Ваше сообщение</label>
+                                    <textarea id="f-message" required></textarea>
+
+                                    <button type="submit" class="gradient">Отправить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="index-poll">
+                                <div class="index-poll-header" style="height: 80px;">
+                                    <h2>Опрос</h2>
+                                    <a href="#">Архив голосований</a>
+                                </div>
+                                <div class="index-poll-title">
+                                    <h3>Оставить ли Штефана Стойку на посту главного тренера национальной сборной?</h3>
+                                </div>
+                                <div class="index-poll-choices">
+                                    <ul class="clearfix">
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li class="selected"><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                        <li><a href="#"><img src="pictures/choice.jpg">23</a></li>
+                                    </ul>
+                                </div>
+                                <hr>
+                                <div class="index-poll-results">
+                                    <ul class="clearfix">
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                        <li>100%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <table class="score-table" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <th>НАЦИОНАЛЬНАЯ ДИВИЗИЯ</th>
+                                    <th>И</th>
+                                    <th>В</th>
+                                    <th>Н</th>
+                                    <th>П</th>
+                                    <th>Очки</th>
+                                </tr>
+                                <tr>
+                                    <td>Команда</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Команда</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Команда</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Команда</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+
+                            <table class="score-table" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                    <th>БОМБАРДИРЫ</th>                                    
+                                    <th>Голы</th>
+                                </tr>
+                                <tr>
+                                    <td><img src="pictures/player.jpg" alt="Игрок">Игрок</td>                                    
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="pictures/player.jpg" alt="Игрок">Игрок</td>                                    
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="pictures/player.jpg" alt="Игрок">Игрок</td>                                    
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="pictures/player.jpg" alt="Игрок">Игрок</td>                                    
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td><img src="pictures/player.jpg" alt="Игрок">Игрок</td>                                    
+                                    <td>2</td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="index-conference-wrapper">
+                                <h2>Конференции</h2>
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-wrapper">
+                                                <img src="pictures/speaker.jpg" alt="">
+                                            </div>
+                                            <div class="speaker-wrapper">
+                                                Константин Константинопольский
+                                                <span>Тренер</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-wrapper">
+                                                <img src="pictures/speaker.jpg" alt="">
+                                            </div>
+                                            <div class="speaker-wrapper">
+                                                Константин Константинопольский
+                                                <span>Тренер</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-wrapper">
+                                                <img src="pictures/speaker.jpg" alt="">
+                                            </div>
+                                            <div class="speaker-wrapper">
+                                                Константин Константинопольский
+                                                <span>Тренер</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="img-wrapper">
+                                                <img src="pictures/speaker.jpg" alt="Константин Константинопольский">
+                                            </div>
+                                            <div class="speaker-wrapper">
+                                                Константин Константинопольский
+                                                <span>Тренер</span>
+                                            </div>
+
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="index-videoblog">
+                                <h2 style="font-size: 32px;">Видеоблог</h2>
+                                <ul class="clearfix">
+                                    <li>
+                                        <a href="#">
+                                            <div class="video-wrapper">
+                                                <img src="pictures/blog-item-img.jpg" alt="Константин Константинопольский">
+                                                <i class="fa fa-play-circle"></i>
+                                            </div>
+                                            Константин Константинопольский
+                                            <span>Тренер</span>                                            
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <div class="video-wrapper">
+                                                <img src="pictures/blog-item-img.jpg" alt="Константин Константинопольский">
+                                                <i class="fa fa-play-circle"></i>
+                                            </div>
+                                            Константин Константинопольский
+                                            <span>Тренер</span>                                            
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <nav class="footer-nav">
+                            <ul class="footer-menu" style="font-size: 18px;">
+                                <li><a href="#">О www.soccer.md</a></li>
+                                <li><a href="#">Редакция</a></li>
+                                <li><a href="#">Вакансии</a></li>
+                                <li><a href="#">Контакты</a></li>
+                                <li><a href="#">Карта сайта</a></li>
+                            </ul>
+
+                            <ul class="social-menu">
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </nav>
+                        <div class="copyrights">
+                            <span class="copy" style="font-size: 12px;">&copy; 2015 «Soccer.md»</span>
+                            <span class="meta">Разработка и дизайн &mdash; <a href="http://meta.md/" target="_blank" rel="nofollow">www.meta.md</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+        </footer>
+        
+        
+        
+        <script src="js/jquery-1-11-3.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.dropdown.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
